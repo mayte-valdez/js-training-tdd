@@ -7,7 +7,9 @@
  */
 
 // Your code:
-
+function total(v) {
+    return v.reduce((a, b)=> a + b,0)
+}
 //* Begin of tests
 const assert = require('assert');
 

@@ -8,6 +8,10 @@
  */
 
 // Your code:
+let str = '1337';
+let num = 42
+var bool = false;
+let undef = undefined;
 
 //* Begin of tests
 const assert = require('assert');
