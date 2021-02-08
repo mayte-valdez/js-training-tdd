@@ -8,9 +8,16 @@
  */
 
 // Your code:
-
+function whisper(string) {
+    const start = '*';
+    return start.concat(string.toLowerCase(),'*')
+}
 //* Begin of tests
 const assert = require('assert');
-
-assert.fail('You must write your own tests');
+assert.strictEqual(typeof whisper, 'function');
+assert.strictEqual(whisper.length, 1);
+assert.strictEqual(whisper('TEST'), '*test*');
+assert.strictEqual(whisper('Hello Word'), '*hello word*');
+assert.strictEqual(whisper('AeIoU'), '*aeiou*');
+//assert.fail('You must write your own tests');
 // End of tests */

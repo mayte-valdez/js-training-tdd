@@ -13,9 +13,15 @@
  */
 
 // Your code:
-
+function keepFirst(str) {
+    return str.substr(0,2)
+}
 //* Begin of tests
 const assert = require('assert');
-
-assert.fail('You must write your own tests');
+assert.strictEqual(typeof keepFirst, 'function');
+assert.strictEqual(keepFirst.length, 1);
+assert.strictEqual(keepFirst('TEST'), 'TE');
+assert.strictEqual(keepFirst('Hello Word'), 'He');
+assert.strictEqual(keepFirst('1234566'), '12');
+//assert.fail('You must write your own tests');
 // End of tests */
