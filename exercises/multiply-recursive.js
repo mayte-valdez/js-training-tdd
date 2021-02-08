@@ -11,18 +11,18 @@
 
 // Your code:
 function multiply(a, b){
-    let total = 0
-    let newNumber = a;
-    if (a > 0) {
-        total = total + b;
-        newNumber = a - 1
-        multiply(newNumber, b); 
-    } else if (a < 0) {
-        total = total + b;
-        newNumber = a + 1
-        multiply(newNumber, b);
-    } else {
-        return total
+    if (a===0 || b === 0){
+        return 0;
+    } 
+    if(a===1){
+        return b;
+    }
+    const ap = Math.abs(a); 
+    const bp = Math.abs(b);
+    if(a > 0 && b > 0 || a < 0 && b < 0){
+        return multiply(ap-1, bp) + bp;
+    } else if (a < 0 || b < 0){
+        return 0 - (multiply(ap-1,bp)+ bp)
     }
 }
 //* Begin of tests
