@@ -10,7 +10,21 @@
  */
 
 // Your code:
-
+function multiply(a, b){
+    let total = 0
+    let newNumber = a;
+    if (a > 0) {
+        total = total + b;
+        newNumber = a - 1
+        multiply(newNumber, b); 
+    } else if (a < 0) {
+        total = total + b;
+        newNumber = a + 1
+        multiply(newNumber, b);
+    } else {
+        return total
+    }
+}
 //* Begin of tests
 const assert = require('assert');
 
